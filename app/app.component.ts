@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'mw-app',
+  selector: 'ps-app',
   templateUrl: 'app/app.component.html',
-  styleUrls: ['app/app.component.css']
+  styleUrls: ['app/app.component.css'],
 })
-export class AppComponent { }
+class AppComponent {}
+
+export default AppComponent;

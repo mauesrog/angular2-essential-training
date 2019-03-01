@@ -1,0 +1,14 @@
+i {
+    opacity: 0;
+    transform-origin: center;
+    color: #838383;
+    bottom: 60%;
+    display: none;
+    font-size: 1.375em;
+}
+
+i.active {
+    display: table;
+    opacity: 0.5;
+    animation: loading 0.5s infinite linear;
+}

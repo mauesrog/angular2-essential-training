@@ -1,0 +1,150 @@
+/* Animations */
+@keyframes loading {
+    from { transform: rotateZ(0deg) translate3d(0, 0, 0); }
+    to { transform: rotateZ(360deg) translate3d(0, 0, 0); }
+}
+
+div.animated-input {
+    height: 65px;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    margin-left: 1.1em;
+    position: relative;
+    display: table;
+    bottom: 43%;
+    background: white;
+    color: #838383;
+    font-size: 0.875em;
+    pointer-events: none;
+    transition: bottom 0.1s;
+    text-align: center;
+}
+
+input {
+    border-radius: 5px;
+    font-size: 0.875em;
+    border-color: #DADCE0;
+    border-style: solid;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+input:disabled {
+    background: white;
+}
+
+label {
+    font-size: 0.75em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 15%;
+    position: relative;
+    opacity: 0;
+    padding: 0 5px;
+}
+
+label.active {
+    opacity: 1;
+}
+
+input[type=text]:disabled, input[type=password]:disabled, input[type=number]:disabled, label {
+    color: #838383;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+}
+
+input[type=text], input[type=password], input[type=number] {
+    padding: 1px 16px 1px 16px;
+    height: 40px;
+    outline: none;
+    border-width: 1px;
+}
+
+input[type=text]:disabled, input[type=password]:disabled, input[type=number]:disabled {
+    border-color: #DADCE0;
+}
+
+input[type=text]:disabled::selection, input[type=password]:disabled::selection, input[type=number]:disabled::selection {
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: #838383;
+}
+
+input[type=text]::selection, input[type=password]::selection, input[type=number]::selection {
+    background-color: #E799C2;
+    color: white;
+}
+
+input[type=text].invalid::selection, input[type=password].invalid::selection, input[type=number].invalid::selection {
+    background-color: red;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=text].invalid, input[type=password].invalid, input[type=number].invalid {
+    padding: 0px 30px 0px 15px;
+    border-width: 2px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
+    border-color: #E10098;
+}
+
+input[type=text].invalid, input[type=password].invalid, input[type=number].invalid {
+    border-color: red;
+}
+
+input[type=text]:focus + h2, input[type=password]:focus + h2, input[type=number]:focus + h2, input[type=text]:not(.ng-invalid) + h2, input[type=password]:not(.ng-invalid) + h2, input[type=number]:not(.ng-invalid) + h2, input[type=text].invalid + h2, input[type=password].invalid + h2, input[type=number].invalid + h2 {
+    padding: 0 5px;
+    font-size: 0.75em;
+}
+
+input[type=text]:focus + h2, input[type=password]:focus + h2, input[type=number]:focus + h2, input[type=text]:not(.ng-invalid) + h2, input[type=password]:not(.ng-invalid) + h2, input[type=number]:not(.ng-invalid) + h2, input[type=text].invalid + h2, input[type=password].invalid + h2, input[type=number].invalid + h2 {
+    bottom: 72%;
+}
+
+input[type=text]:focus + h2, input[type=password]:focus + h2, input[type=number]:focus + h2 {
+    color: #E799C2 !important;
+}
+
+input[type=text]:not(.ng-invalid) + h2, input[type=password]:not(.ng-invalid) + h2, input[type=number]:not(.ng-invalid) + h2 {
+    color: #838383;
+}
+
+input[type=text].invalid + h2, input[type=password].invalid + h2, input[type=number].invalid + h2 {
+    color: red !important;
+}
+
+
+input[type=text]:-webkit-autofill, input[type=password]:-webkit-autofill, input[type=number]:-webkit-autofill {
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    padding: 1px;
+    background: #E10098;
+    color: white;
+    border: none;
+}
+
+input[type=submit]:focus {
+    outline: none;
+    border-radius: 5px;
+    margin: 0;
+}
+
+input[type=submit]:disabled {
+    cursor: default;
+    background: #E799C2;
+}
+
+input[type=submit].submitted {
+    background: #F2F2F2;
+    color: #838383;
+    cursor: default;
+}

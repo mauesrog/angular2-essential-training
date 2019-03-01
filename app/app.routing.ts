@@ -1,12 +1,19 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { MediaItemFormComponent } from './media-item-form.component';
-import { MediaItemListComponent } from './media-item-list.component';
+import AboutComponent from './about.component';
+import SessionComponent from './session.component';
+import StoreComponent from './store.component';
 
-const appRoutes: Routes = [
-  { path: 'add', component: MediaItemFormComponent },
-  { path: ':medium', component: MediaItemListComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'all' }
-];
+
+const appRoutes: Routes = [{
+    path: 'join', component: SessionComponent, 
+}, {
+    path: 'about', component: AboutComponent,
+}, {
+    path: 'store', component: StoreComponent,
+}, {
+    path: '', pathMatch: 'full', redirectTo: 'about'
+}];
+
 
 export const routing = RouterModule.forRoot(appRoutes);

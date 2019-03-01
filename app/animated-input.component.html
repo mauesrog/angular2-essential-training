@@ -1,0 +1,14 @@
+<div class="animated-input" [id]="id" [formGroup]="form">
+    <input
+        [type]="type"
+        [id]="id"
+        [ngClass]="form.get(id).errors | toInputClass: this.sharedErrors()"
+        [formControlName]="id"
+        (blur)="onBlur()"
+        (focus)="onFocus($event)"
+        (change)="onChange($event)"
+        (keydown)="onKeyDown($event)"
+    >
+    <h2 key="title" id="label" (click)="onClick($event)">{{ text }}</h2>
+    <label [psInputError]="id === 'password' ? null : form.get(id).errors" [for]="id"></label>
+</div>

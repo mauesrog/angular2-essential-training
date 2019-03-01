@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div id="identity">
+        <ps-animated-input [form]="form" type="text" id="name" text="Nombre(s)" [isLoading]="isLoading"></ps-animated-input>
+        <ps-animated-input [form]="form" type="text" id="lastName" text="Apellido(s)" [isLoading]="isLoading"></ps-animated-input>
+    </div>
+    <ps-animated-input
+        [form]="form"
+        type="text"
+        id="username"
+        text="Nombre de usuario"
+        [isLoading]="isLoading"
+        (changeInput)="onChangeUsername()"
+    ></ps-animated-input>
+    <ps-animated-input
+        [form]="form"
+        type="text"
+        id="email"
+        text="Correo electrónico"
+        [isLoading]="isLoading"
+        (changeInput)="onChangeEmail()"
+    ></ps-animated-input>
+    <ps-animated-input [form]="form" type="password" id="password" text="Contraseña" [isLoading]="isLoading" [otherIds]="['confirmPassword']"></ps-animated-input>
+    <ps-animated-input [form]="form" type="password" id="confirmPassword" text="Confirmar contraseña" [isLoading]="isLoading" [otherIds]="['password']"></ps-animated-input>
+    <input *ngIf="!isLoading" type="submit" [disabled]="!form.valid || isLoading">
+    <i *ngIf="isLoading" key="loader" id="loader" ngClass="fa fa-spinner active"></i>
+</form>

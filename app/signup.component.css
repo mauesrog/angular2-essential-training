@@ -1,0 +1,44 @@
+form {
+    height: auto;
+    width: 100%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    border-left: 1px solid #DADCE0;
+    border-right: 1px solid #DADCE0;
+    border-bottom: 1px solid #DADCE0;
+}
+
+form > :last-child {
+    margin-bottom: 20px;
+}
+
+div#identity {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+i {
+    padding: 10px;
+}
+
+::ng-deep div.animated-input {
+    width: 150px;
+    margin-top: 5px;
+}
+
+::ng-deep div#username, ::ng-deep div#email, ::ng-deep div#password, ::ng-deep div#confirmPassword {
+    width: 290px;
+}
+
+::ng-deep input[type="submit"] {
+    height: 42px;
+    width: 100px;
+}

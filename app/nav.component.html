@@ -1,0 +1,10 @@
+<nav>
+    <ul>
+        <li id="logo">
+            <a routerLink="about"><img [src]="navigationData.logoUrl" alt="logo" /></a>
+        </li>
+        <li *ngFor="let tab of navigationData.tabs">
+            <a [ngClass]="{'selected': activeRoute === tab.id}" [routerLink]="tab.href">{{tab.text}}</a>
+        </li>
+    </ul>
+</nav>
